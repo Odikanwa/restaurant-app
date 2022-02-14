@@ -1,5 +1,5 @@
 .container {
-    height: 80px;
+    height: 100px;
     padding: 0px 50px;
     background-color: #d1411e;
     display: flex;
@@ -7,6 +7,7 @@
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 .item {
     flex: 1;
@@ -77,4 +78,13 @@
     justify-content: center;
     font-weight: bold;
     color: #d1411e;
+}
+
+@media screen and (max-width: 480px) {
+    .item:nth-child(2) {
+        display: none;
+    }
+    .item:nth-child(1) {
+        flex: 3;
+    }
 }
